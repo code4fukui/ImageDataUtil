@@ -3,10 +3,18 @@ import { PNG } from "https://code4fukui.github.io/PNG/PNG.js";
 import { ImageResizer } from "https://code4fukui.github.io/ImageResizer/ImageResizer.js";
 
 export class ImageDataUtil {
+  static getFormat(bin) {
+    if (PNG.canDecode(bin)) {
+      return "png";
+    } else if (JPEG.canDecode(bin)) {
+      return "jpg";
+    }
+    return null;
+  }
   static decodeImage(bin) {
     if (PNG.canDecode(bin)) {
       return PNG.decode(bin);
-    } else if (PNG.canDecode(bin)) {
+    } else if (JPEG.canDecode(bin)) {
       return JPEG.decode(bin);
     }
     throw new Error("not supported format");
