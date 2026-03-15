@@ -1,11 +1,13 @@
 # ImageDataUtil.js
 
-Utility functions for ImageData.
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+Utility functions for manipulating ImageData objects.
 
 ## Functions
 
 - `decode(bin)`: Returns an ImageData object from the binary data.
-- `encode(imgdata)`: Returns the binary data of the ImageData object.
+- `encode(imgdata, ext)`: Returns the binary data of the ImageData object in the specified format (jpg or png).
 - `resize(imgdata, wdst, hdst = 0)`: Returns a new ImageData object with the specified width and height.
 - `crop(imgdata, x, y, w, h)`: Returns a new ImageData object cropped to the specified rectangle.
 
