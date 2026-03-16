@@ -1,11 +1,11 @@
 # ImageDataUtil.js
 
-ImageDataを扱うためのユーティリティ関数ライブラリです。
+ImageDataオブジェクトを操作するためのユーティリティ関数ライブラリです。
 
 ## 機能
 
 - `decode(bin)`: バイナリデータからImageDataオブジェクトを生成します。
-- `encode(imgdata)`: ImageDataオブジェクトからバイナリデータを生成します。
+- `encode(imgdata, ext)`: ImageDataオブジェクトをJPEGやPNGなどのバイナリデータにエンコードします。
 - `resize(imgdata, wdst, hdst = 0)`: ImageDataオブジェクトのサイズを変更した新しいImageDataオブジェクトを返します。
 - `crop(imgdata, x, y, w, h)`: ImageDataオブジェクトから指定された矩形領域をトリミングした新しいImageDataオブジェクトを返します。
 
